@@ -5,7 +5,7 @@ Evil-like registers for dired
 * Functions can be used outside of dired as well
  
 # Slightly more detail
-I like emacs bookmarks but I rarely want to create something so permanent to just hold my place when moving between directories (e.g., when copying and pasting files between directories; see [dired-copy-paste](https://github.com/jsilve24/dired-copy-paste) for more on copying and pasting in dired). This package lower the barrier to keeping your place by implementing registers storing a directory and making it easy to jump back later. Think of these registers like temporary bookmarks that don't persist between sessions (just like evil registers). 
+I like emacs bookmarks but I rarely want to create something so permanent to just hold my place when moving between directories (e.g., when copying and pasting files between directories; see [dired-copy-paste](https://github.com/jsilve24/dired-copy-paste) for more on copying and pasting in dired). This package lowers the barrier to keeping your place by implementing registers storing a directory and making it easy to jump back later. Think of these registers like temporary bookmarks that don't persist between sessions (just like evil registers). 
 
 # Install and Configuration Example
 The following use-package snippet uses straight to install the package and then set some registers I use frequently. 
