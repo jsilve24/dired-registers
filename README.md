@@ -1,8 +1,11 @@
 # dired-registers
-Evil-like registers for dired (without dependence on evil)
+Evil-like registers for dired 
+ 
+* No dependence on evil
+* Functions can be used outside of dired as well
 
 # Install and Configuration Example
-The following use-package snippet uses straight to install the package and then setups up some prepopulated registers. 
+The following use-package snippet uses straight to install the package and then set some registers I use frequently. 
 
 ```
 (use-package dired-registers
@@ -33,7 +36,7 @@ I bind the following for quick use in dired-mode.
  :states 'normal
  :keymaps 'dired-mode-map
  ";m" #'dired-registers-store
- ";'" #'dired-registers-goto)
+ ";j" #'dired-registers-goto)
 ```
 
 I bind the following for use everywhere under my leader key (`SPC`). 
