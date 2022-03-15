@@ -33,6 +33,10 @@
 
 ;;; Code:
 
+;;;; Requirements
+(require 'dired-single)
+
+
 (defvar dired-registers--register-alist
   (mapcar (lambda (c) (cons c nil)) (number-sequence ?a ?z))
   "Alist of symbols and paths, the datastructure of the registers.")
