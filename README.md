@@ -26,7 +26,7 @@ The following use-package snippet uses straight to install the package and then 
 There are two main functions and one helper function in this package. The main functions are 
 
 * `dired-registers-store` which, when called interactively, prompts the user for a character (a-z) then stores the current value of `default-directory` in that register. 
-* `dired-registers-goto` which, when called interactively, prompts the user for a character (a-z) and then jumps to the directory stored in that register. Also, if currently visited buffer has major-mode `dired-mode` then moves current buffer rather than cluttering things up by creating a new dired buffer. If not a dired buffer, then creates a new dired buffer (to avoid overwriting another dired buffer you may be looking at in a different window). 
+* `dired-registers-goto` which, when called interactively, prompts the user for a character (a-z) and then jumps to the directory stored in that register. Also, if currently visited buffer has major-mode `dired-mode` then moves current buffer rather than cluttering things up by creating a new dired buffer. If not a dired buffer, then creates a new dired buffer (to avoid overwriting another dired buffer you may be looking at in a different window). Finally, if a filename (not a directory) is stored in a  register this function uses `find-file` to jump to open that file. 
 
 Beyond these main functions, users can also use the function `dired-registers-goto-completing-read` to view the registers and jump using completing-read. 
 
