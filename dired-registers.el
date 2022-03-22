@@ -25,7 +25,7 @@
 
 ;; Simple package that implements evil register like behavior (e.g., evil's interface to emacs
 ;; marks) for dired without evil. In essence these are like temporary bookmarks that do not persist
-;; across emacs sessions and therefore. Useful for quickly markikng a directory to come back to. 
+;; across emacs sessions and therefore. Useful for quickly markikng a directory to come back to.
 
 ;; When jumping to a register location, if current buffer is a dired buffer then replaces that
 ;; buffer when jumping to register (to avoid making a new dired buffer, otherwise makes a new dired
@@ -59,7 +59,9 @@
   (interactive "c")
   (let ((path (cdr (assoc reg dired-registers--register-alist))))
     (if (file-exists-p path)
-	(dired-registers--dired-single-buffer path)
+        (if (file-directory-p path)
+            (dired-registers--dired-single-buffer path)
+          (find-file path))
       (message (format
 		"No valid path stored in regiseter %c"
 		reg)))))
