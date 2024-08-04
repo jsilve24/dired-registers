@@ -3,7 +3,7 @@
 ;; Author: Justin Silverman (justinsilverman@psu.edu)
 ;; Maintainer: Justin Silverman (justinsilverman@psu.edu)
 ;; Version: 0.1
-;; Package-Requires: (dired)
+;; Package-Requires: (dired dired-single)
 ;; Homepage: tbd
 ;; Keywords: dired
 
